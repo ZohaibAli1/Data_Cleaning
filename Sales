@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+
+df = pd.read_csv('Sales Data.csv', encoding= 'unicode_escape')
+
+df.shape
+
+df.head()
+
+df.info()
+
+df.drop(['Status','unnamed1'],axis=1, inplace=True)
+
+df.info()
+
+pd.isnull(df)
+
+pd.isnull(df).sum()
+
+df.dropna(inplace=True)
+
+data_test = [['madhav',11],['Gopi',15],['Keshav'],['Lalita',16]]
+df_test = pd.DataFrame(data_test, columns=['name','age'])
+df_test
